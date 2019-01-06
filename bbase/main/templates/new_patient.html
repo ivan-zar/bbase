@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ввод нового пациента</title></title>
+</head>
+<body>
+<form action="{% url 'new_patient_submit'%}" method="post">
+    {% csrf_token %}
+    Имя:<input type="text" name="name"><br>
+    Дата рождения:<input type="date" name="birth_date"><br>
+    <input type="submit" value="submit">
+</form>
+</body>
+</html>

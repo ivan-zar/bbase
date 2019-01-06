@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div><a href="{% url 'patient_choice' %}"><<< Вернуться к списку пациентов</a></div>
+<div>Пациент: {{patient.name}}</div>
+<div>
+        # - Дата - Тип теста <br>
+    {% for i in tests %}
+        <a href="{% url 'test' patient.id i.id %}">{{ i.id }} - {{ i.date }} - {{ i.testType_id }}</a> <br>
+    {% endfor %}
+</div>
+<div>
+    <a href="{% url 'new_test' patient.id %}">+Добавить исследование</a>
+</div>
+</body>
+</html>

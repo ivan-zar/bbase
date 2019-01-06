@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Результаты исследования</title>
+</head>
+<body>
+<a href="{% url 'patient' patient_id %}"><<<Вернуться к исследованиям пациента</a>
+   <div>
+      HB: {{ test.hb }}
+      RBC: {{ test.rbc }}
+      HCT: {{ test.hct }}
+      WBC: {{ test.wbc }}
+   </div>
+<a href="{% url 'delete_test' patient_id test_id %}">-Удалить исследование</a>
+</body>
+</html>

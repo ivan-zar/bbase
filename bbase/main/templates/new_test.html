@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Новое исследование</title>
+</head>
+<body>
+Пациент {{ patient.name }}
+<form method="POST">
+    {% csrf_token %}
+    <input type="date" name="date"><br>
+    <label for="testType">Тип исследования:</label><input type="text" name="testType" value="1"><br>
+    <label for="hb">HB (Hemoglobin, grams/dL)</label><input type="text" name="hb"><br>
+    <label for="rbc">RBC(Red blood cell count, grams/dL)</label><input type="text" name="rbc"><br>
+    <label for="hct">HCT (Hematocrit, percent)</label><input type="text" name="hct"><br>
+    <label for="wbc">WBC (White blood cell count, billion cells/L)</label><input type="text" name="wbc"><br>
+    <input type="submit">
+</form>
+</body>
+</html>

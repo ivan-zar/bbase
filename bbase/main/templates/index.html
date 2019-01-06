@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>Пациент:{% if patient_chosen == True %}
+    {{patient.name}}
+    {% else %}
+        не выбран
+    {% endif %}
+    | <a href="{% url 'patient_choice' %}">Другой пациент</a> | <a href="">+Новый пациент</a></body></div>
+<div><a href="">+Новое исследование</a></div>
+-------------------------------------
+<div><a href="">Экран пациента</a></div>
+</body>
+</html>
